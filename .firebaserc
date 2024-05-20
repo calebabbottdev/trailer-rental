@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "dev-trailer-rental",
+    "test": "test-trailer-rental",
+    "prod": "prod-trailer-rental"
+  }
+}
