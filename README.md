@@ -46,8 +46,8 @@ This project utilizes GitHub Actions for continuous integration and deployment t
 
 ## Live Sites
 
-- [Production Site](https://prod-trailer-rental.web.app/){:target="\_blank"}
-- [Test Site](https://test-trailer-rental.web.app/){:target="\_blank"}
+- <a href="https://prod-trailer-rental.web.app/" target="_blank">Production Site</a>
+- <a href="https://test-trailer-rental.web.app/" target="_blank">Test Site</a>
 
 ## License
 
