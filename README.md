@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+# Trailer Rental Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Trailer Rental Platform! This platform allows users to rent trailers for various purposes, providing a convenient and reliable way to find and book trailers for their needs.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search and Browse**: Users can search for trailers based on location, availability, type, and other criteria. They can browse through a wide range of trailers listed on the platform.
 
-## Expanding the ESLint configuration
+- **Booking and Reservation**: Users can view trailer details, check availability, and book trailers for specific dates. The booking process is straightforward and secure.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **User Profiles**: Users can create profiles, manage their bookings, and track their rental history. They can also leave reviews and ratings for trailers they have rented.
 
-- Configure the top-level `parserOptions` property like this:
+- **Trailer Listings**: Owners can list their trailers on the platform, providing details such as description, amenities, location, and pricing. They can manage their listings and respond to booking requests.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## GitHub Actions
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This project utilizes GitHub Actions for continuous integration and deployment to Firebase Hosting. The workflow is configured to deploy the application to different environments (production and test) based on the branch and pull request events.
+
+### Workflow Configuration
+
+- **Pull Requests to Test Branch**: When a pull request is opened targeting the `test` branch, the application is built and deployed to the test environment. This allows for thorough testing before merging changes into the main branch.
+
+- **Pull Requests to Main Branch**: When code is merged into the `main` branch, the application is automatically built and deployed to the production environment.
+
+### Setup Instructions
+
+1.  **Repository Secrets**: Ensure the necessary Firebase service account keys and GitHub tokens are set up as secrets in your GitHub repository settings.
+
+- `FIREBASE_SERVICE_ACCOUNT_PROD_TRAILER_RENTAL`: Firebase service account key for production.
+
+- `FIREBASE_SERVICE_ACCOUNT_TEST_TRAILER_RENTAL`: Firebase service account key for test.
+
+- `GITHUB_TOKEN`: GitHub token with appropriate permissions.
+
+2.  **Workflow File**: The `.github/workflows/firebase-deployment.yml` file contains the configuration for GitHub Actions.
+
+## Technologies Used
+
+- **Frontend**: React, Redux Toolkit, Material-UI
+
+- **Backend**: Firebase (Authentication, Firestore, Cloud Functions)
+
+- **Database**: Firestore (NoSQL database)
+
+- **Other**: Node.js, Express.js (for backend API), Git (version control)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or support, please contact us at [cabbottdev@gmail.com](mailto:cabbottdev@gmail.com).
