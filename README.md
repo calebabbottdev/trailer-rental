@@ -44,10 +44,16 @@ This project utilizes GitHub Actions for continuous integration and deployment t
 
 - **Other**: Node.js, Express.js (for backend API), Git (version control)
 
+## Live Sites
+
+- [Test Environment](https://test-trailer-rental.web.app/)
+
+- [Production Environment](https://prod-trailer-rental.web.app/)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For any inquiries or support, please contact us at [cabbottdev@gmail.com](mailto:cabbottdev@gmail.com).
+For any inquiries or support, please contact me at [cabbottdev@gmail.com](mailto:cabbottdev@gmail.com).
