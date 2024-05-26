@@ -11,13 +11,13 @@ jobs:
     if: github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
     env:
-      VITE_FIREBASE_API_KEY: 'AIzaSyApjz_Y0SaYwath6x_ZuJL_BPk01PA7q7w'
-      VITE_FIREBASE_AUTH_DOMAIN: 'prod-trailer-rental.firebaseapp.com'
-      VITE_FIREBASE_PROJECT_ID: 'prod-trailer-rental'
-      VITE_FIREBASE_STORAGE_BUCKET: 'prod-trailer-rental.appspot.com'
-      VITE_FIREBASE_MESSAGING_SENDER_ID: '268717464417'
-      VITE_FIREBASE_APP_ID: '1:268717464417:web:8d81dd679f4c39deb38320'
-      VITE_FIREBASE_MEASUREMENT_ID: 'G-PR3XE5RXLT'
+      VITE_FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY_PROD }}
+      VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN_PROD }}
+      VITE_FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID_PROD }}
+      VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET_PROD }}
+      VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID_PROD }}
+      VITE_FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID_PROD }}
+      VITE_FIREBASE_MEASUREMENT_ID: $${{ secrets.FIREBASE_MEASUREMENT_ID_PROD }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -45,13 +45,13 @@ jobs:
     if: github.event.pull_request.base.ref == 'test'
     runs-on: ubuntu-latest
     env:
-      VITE_FIREBASE_API_KEY: 'AIzaSyACAGhDIIoyUXzvDUl0kRub9M887X6xjFM'
-      VITE_FIREBASE_AUTH_DOMAIN: 'test-trailer-rental.firebaseapp.com'
-      VITE_FIREBASE_PROJECT_ID: 'test-trailer-rental'
-      VITE_FIREBASE_STORAGE_BUCKET: 'test-trailer-rental.appspot.com'
-      VITE_FIREBASE_MESSAGING_SENDER_ID: '905721826645'
-      VITE_FIREBASE_APP_ID: '1:905721826645:web:285f2311433141a0c7f3dc'
-      VITE_FIREBASE_MEASUREMENT_ID: 'G-GKYYM2S35J'
+      VITE_FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY_TEST }}
+      VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN_TEST }}
+      VITE_FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID_TEST }}
+      VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET_TEST }}
+      VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID_TEST }}
+      VITE_FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID_TEST }}
+      VITE_FIREBASE_MEASUREMENT_ID: $${{ secrets.FIREBASE_MEASUREMENT_ID_TEST }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
