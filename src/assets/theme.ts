@@ -4,11 +4,11 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#00C7E6',
-      contrastText: '#000',
+      main: '#003049',
+      contrastText: '#fff',
     },
     secondary: {
-      main: '#F79B19',
+      main: '#d62828',
       contrastText: '#fff',
     },
     background: {
@@ -40,19 +40,19 @@ const theme = createTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
-    h1: {
-      fontWeight: 500,
-      fontSize: 28,
-      '@media (min-width:600px)': {
-        fontSize: 34,
-      },
-      '@media (min-width:900px)': {
-        fontSize: 40,
-      },
-      '@media (min-width:1200px)': {
-        fontSize: 44,
-      },
-    },
+    // h1: {
+    //   fontWeight: 500,
+    //   fontSize: 28,
+    //   '@media (min-width:600px)': {
+    //     fontSize: 34,
+    //   },
+    //   '@media (min-width:900px)': {
+    //     fontSize: 40,
+    //   },
+    //   '@media (min-width:1200px)': {
+    //     fontSize: 44,
+    //   },
+    // },
   },
 });
 
