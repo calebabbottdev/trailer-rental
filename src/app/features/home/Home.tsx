@@ -1,16 +1,17 @@
-// MUI
-import { Box } from '@mui/material';
-
 // Components
 import Container from '@container';
-import HomePageHeader from '@features/home/components/HomePageHeader';
+import Header from '@features/home/components/Header';
+import SearchByType from '@features/home/components/SearchByType';
 
 export default function Home() {
-  console.log('Home');
   return (
-    <Box sx={{ bgcolor: '#eee' }}>
-      {/* <Container id='home-container'>{HomePageHeader()}</Container> */}
-      Home
-    </Box>
+    <>
+      <Container id='home-container' setBgColor>
+        <Header />
+      </Container>
+      <Container id='search-by-type-container'>
+        <SearchByType />
+      </Container>
+    </>
   );
 }
