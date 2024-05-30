@@ -31,14 +31,31 @@ const images: GalleryProps = [
 
 export default function Gallery() {
   return (
-    <Grid container sx={{ py: 3 }}>
+    <Grid
+      container
+      sx={{
+        py: 3,
+      }}
+    >
       {images.map((image, index) => (
-        <Grid item sx={{ p: 1 }}>
-          <Card sx={{ maxWidth: 345 }} key={index}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={2}
+          sx={{
+            p: 1,
+          }}
+        >
+          <Card
+            // sx={{ maxWidth: 345 }}
+            key={index}
+          >
             <CardActionArea>
               <CardMedia
                 component='img'
-                height='140'
+                // height='140'
                 image={image}
                 alt='Gallery image'
               />
