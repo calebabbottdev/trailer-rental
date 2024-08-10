@@ -1,5 +1,5 @@
-const baseUrl = 'http://localhost:5173';
-// const baseUrl = 'https://test-trailer-rental.web.app';
+// const baseUrl = 'http://localhost:5173';
+const baseUrl = 'https://test-trailer-rental.web.app';
 
 // Unprotected
 export const home = baseUrl;
