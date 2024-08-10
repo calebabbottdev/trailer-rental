@@ -12,7 +12,7 @@ type Error = {
   message: string;
 };
 
-export default function Error() {
+const Error = () => {
   const error = useRouteError() as Error;
   console.error(error);
 
@@ -69,4 +69,6 @@ export default function Error() {
       </Container>
     </Box>
   );
-}
+};
+
+export default Error;
