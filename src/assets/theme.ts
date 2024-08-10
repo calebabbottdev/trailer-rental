@@ -1,21 +1,26 @@
 import { createTheme } from '@mui/material/styles';
 
+const primaryColor = '#023047';
+const secondaryColor = '#219ebc';
+const tertiaryColor = '#8ecae6';
+const primaryTextColor = '#000';
+
 const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#00C7E6',
-      contrastText: '#000',
+      main: primaryColor,
+      contrastText: '#fff',
     },
     secondary: {
-      main: '#F79B19',
+      main: secondaryColor,
       contrastText: '#fff',
     },
     background: {
-      default: '#ffffff',
+      default: '#eee',
     },
     text: {
-      primary: '#000',
+      primary: primaryTextColor,
     },
   },
   breakpoints: {
@@ -41,7 +46,8 @@ const theme = createTheme({
       '"Segoe UI Symbol"',
     ].join(','),
     h1: {
-      fontWeight: 500,
+      color: primaryColor,
+      fontWeight: 700,
       fontSize: 28,
       '@media (min-width:600px)': {
         fontSize: 34,
@@ -51,6 +57,34 @@ const theme = createTheme({
       },
       '@media (min-width:1200px)': {
         fontSize: 44,
+      },
+    },
+    h2: {
+      color: primaryColor,
+      fontWeight: 600,
+      fontSize: 20,
+      '@media (min-width:600px)': {
+        fontSize: 26,
+      },
+      '@media (min-width:900px)': {
+        fontSize: 32,
+      },
+      '@media (min-width:1200px)': {
+        fontSize: 36,
+      },
+    },
+    h3: {
+      color: primaryColor,
+      fontWeight: 500,
+      fontSize: 16,
+      '@media (min-width:600px)': {
+        fontSize: 22,
+      },
+      '@media (min-width:900px)': {
+        fontSize: 28,
+      },
+      '@media (min-width:1200px)': {
+        fontSize: 32,
       },
     },
   },
