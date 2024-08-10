@@ -7,12 +7,12 @@ import {
   useMediaQuery,
 } from '@mui/material';
 
-export default function Header() {
+const Header = () => {
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Grid container xs={12} md={8} sx={{ py: 3 }}>
+    <Grid container sx={{ py: 3 }}>
       <Grid item>
         <Typography
           variant='h1'
@@ -36,4 +36,6 @@ export default function Header() {
       </Grid>
     </Grid>
   );
-}
+};
+
+export default Header;

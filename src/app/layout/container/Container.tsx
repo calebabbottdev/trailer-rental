@@ -1,7 +1,7 @@
 // MUI
 import { Box, Container as MUIContainer, useTheme } from '@mui/material';
 
-export default function Container({
+const Container = ({
   id,
   children,
   setBgColor,
@@ -9,7 +9,7 @@ export default function Container({
   id: string;
   children: React.ReactNode;
   setBgColor?: boolean;
-}) {
+}) => {
   const theme = useTheme();
 
   return (
@@ -20,4 +20,6 @@ export default function Container({
       <MUIContainer maxWidth='lg'>{children}</MUIContainer>
     </Box>
   );
-}
+};
+
+export default Container;

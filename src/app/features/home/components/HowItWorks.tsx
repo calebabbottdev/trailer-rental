@@ -1,6 +1,7 @@
+// MUI
 import { Box, Grid, Paper, Typography, useTheme } from '@mui/material';
 
-export default function HowItWorks() {
+const HowItWorks = () => {
   const theme = useTheme();
 
   return (
@@ -44,4 +45,5 @@ export default function HowItWorks() {
       </Grid>
     </Box>
   );
-}
+};
+export default HowItWorks;
