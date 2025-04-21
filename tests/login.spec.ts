@@ -1,27 +1,26 @@
 import { test, expect } from '@playwright/test';
 
-import LoginPage from './pages/login-page';
-import { login } from './utils/pages';
+import Login from './pages/login';
 import userData from './data/user-data';
 
-let loginPage: LoginPage;
+let login: Login;
 
 test.beforeEach(async ({ page }) => {
-  await page.goto(login);
-  loginPage = new LoginPage(page);
+  login = new Login(page);
+  await login.goto();
 });
 
-test('has title', async ({ page }) => {
-  await expect(loginPage.title).toBeVisible();
+test('should have title', async () => {
+  await expect(login.title).toBeVisible();
 });
 
-test('should login', async ({ page }) => {
-  await loginPage.doLogin(userData.host, '123456');
+test('should login', async () => {
+  await login.doLogin(userData.host, '123456');
   expect(true).toBe(true);
 });
 
-test('should see error', async ({ page }) => {
-  await loginPage.doLogin('test@test.com', '123456');
+test('should see error', async () => {
+  await login.doLogin('test@test.com', '123456');
   expect(true).toBe(true);
 });
 
