@@ -22,7 +22,7 @@ app.put('/users/:id', authenticate, putUser);
 
 app.post('/trailers', authenticate, postTrailers);
 app.get('/trailers', getTrailers);
-app.get('/trailer/:id', getTrailer);
+app.get('/trailers/:id', getTrailer);
 
 // Export Firebase Functions for the API routes
 exports.api = functions.https.onRequest(app);
