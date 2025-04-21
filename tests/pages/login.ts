@@ -1,6 +1,7 @@
 import { type Page, type Locator } from '@playwright/test';
 
-class LoginPage {
+class Login {
+  readonly url: string;
   readonly page: Page;
   readonly title: Locator;
   readonly emailAddress: Locator;
@@ -10,6 +11,7 @@ class LoginPage {
   readonly error: Locator;
 
   constructor(page: Page) {
+    this.url = 'https://prod-trailer-rental.web.app/login';
     this.page = page;
     this.title = page.getByRole('heading', { name: 'Login' });
     this.emailAddress = page.getByLabel('Email');
@@ -17,6 +19,10 @@ class LoginPage {
     this.loginButton = page.getByRole('button', { name: 'Login' });
     this.credentials = page.getByTestId('credentials');
     this.error = page.getByTestId('error');
+  }
+
+  async goto() {
+    await this.page.goto(this.url);
   }
 
   async fillEmailAddress(email: string) {
@@ -34,4 +40,4 @@ class LoginPage {
   }
 }
 
-export default LoginPage;
+export default Login;
