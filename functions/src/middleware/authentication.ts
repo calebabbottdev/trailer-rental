@@ -1,6 +1,10 @@
 import * as admin from 'firebase-admin';
 
-export const authenticate = async (req: any, res: any, next: any) => {
+export const authenticate = async (
+  req: any,
+  res: any,
+  next: any,
+): Promise<void> => {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return res.status(401).json({ error: 'Unauthorized: No token provided' });

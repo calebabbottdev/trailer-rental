@@ -1,7 +1,10 @@
 import { Request, Response } from 'express';
 import { db } from '../../app';
 
-export const getTrailers = async (_request: Request, response: Response) => {
+export const getTrailers = async (
+  _request: Request,
+  response: Response,
+): Promise<void> => {
   try {
     const trailerDocsSnapshot = await db.collection('trailers').get();
 

@@ -1,7 +1,10 @@
 import { Request, Response } from 'express';
 import { db } from '../../app';
 
-export const getUsers = async (_request: Request, response: Response) => {
+export const getUsers = async (
+  _request: Request,
+  response: Response,
+): Promise<void> => {
   try {
     const userDocsSnapshot = await db.collection('users').get();
 

@@ -1,7 +1,10 @@
 import { Request, Response } from 'express';
 import { db } from '../../app';
 
-export const getUser = async (request: Request, response: Response) => {
+export const getUser = async (
+  request: Request,
+  response: Response,
+): Promise<void> => {
   const { id } = request.params;
 
   try {
