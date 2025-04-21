@@ -7,7 +7,7 @@ import { Link, Outlet } from 'react-router-dom';
 // Routes
 import { routes } from '@routes/routes';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <>
       <AppBar
@@ -37,4 +37,6 @@ export default function Navbar() {
       <Box id='outlet-container' children={<Outlet />} />
     </>
   );
-}
+};
+
+export default Navbar;
